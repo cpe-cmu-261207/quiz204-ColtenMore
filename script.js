@@ -8,7 +8,7 @@ const color = document.querySelector('#color')
 
 btn_toggle.onclick = () => {
   // your code here
-  let h1 = document.getElementById('author')[0].style.display = 'none';
+  // let h1 = document.getElementById('author')[0].style.display = 'none';
   let sn = document.querySelector('#author')
   let sn2 = sn.innerHTML
   let x = sn2.substr(0, 10)
