@@ -8,7 +8,12 @@ const color = document.querySelector('#color')
 
 btn_toggle.onclick = () => {
   // your code here
-
+  let h1 = document.getElementById('author')[0].style.display = 'none';
+  let sn = document.querySelector('#author')
+  let sn2 = sn.innerHTML
+  let x = sn2.substr(0, 10)
+  let l = length.value
+  calculation.innerHTML = x - l
 }
 
 // more codes for Search and Reset buttons here
@@ -16,7 +21,7 @@ function highlight(text) {
   var inputText = document.getElementById("length")
   var innerHTML = inputText.innerHTML
   var index = innerHTML.indexOf(text)
-  if (index >= 0) { 
+  if (index.length >= length) { 
    innerHTML = innerHTML.substring(0,index) + "<span class='highlight'>" + innerHTML.substring(index,index+text.length) + "</span>" + innerHTML.substring(index + text.length)
    inputText.innerHTML = innerHTML
   }
@@ -26,3 +31,4 @@ const sBtn = document.querySelector('#search')
 sBtn.onclick = () => {
   highlight(length)
 }
+
